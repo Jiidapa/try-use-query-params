@@ -1,19 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import {
-  QueryParamProvider,
-  useQueryParam,
-  NumberParam,
-  withDefault,
-} from "use-query-params";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { QueryParamProvider } from "use-query-params";
 import App from "./App";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <QueryParamProvider ReactRouterRoute={Route}>
       <App />
     </QueryParamProvider>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById("root")
 );
